@@ -1,6 +1,6 @@
 /*Author: Tamires D Boniolo*/
 
-/*1. Write a script that creates and calls a stored procedure named test. This stored procedure should declare a variable and set it to the count of all products in the Products table. If the count is greater than or equal to 7, the stored procedure should display a message that says, “The number of products is greater than or equal to 7”. Otherwise, it should say, “The number of products is less than 7”. */
+/* script that creates and calls a stored procedure named test. This stored procedure should declare a variable and set it to the count of all products in the Products table. If the count is greater than or equal to 7, the stored procedure should display a message that says, “The number of products is greater than or equal to 7”. Otherwise, it should say, “The number of products is less than 7”. */
 DROP PROCEDURE IF EXISTS test;
 DELIMITER // 
 CREATE PROCEDURE test()  
@@ -20,7 +20,7 @@ DELIMITER ; --need to have a space between the word and the semicolon to work
 CALL test();
 
 
-/*2. Write a script that creates and calls a stored procedure named test. This stored procedure should use two variables to store (1) the count of all of the products in the Products table and (2) the average list price for those products. If the product count is greater than or equal to 7, the stored procedure should display a result set that displays the values of both variables. Otherwise, the procedure should display a result set that displays a message that says, “The number of products is less than 7”.*/
+/*script that creates and calls a stored procedure named test. This stored procedure should use two variables to store (1) the count of all of the products in the Products table and (2) the average list price for those products. If the product count is greater than or equal to 7, the stored procedure should display a result set that displays the values of both variables. Otherwise, the procedure should display a result set that displays a message that says, “The number of products is less than 7”.*/
 DROP PROCEDURE IF EXISTS test;
 DELIMITER //
  
@@ -43,7 +43,7 @@ END//
 DELIMITER ;
 CALL test();
 		
-/*3 Write a script that creates and calls a stored procedure named test. This procedure should calculate the common factors between 10 and 20. To find a common factor, you can use the modulo operator (%) to check whether a number can be evenly divided into both numbers. Then, this procedure should display a string that displays the common factors like this: 
+/*script that creates and calls a stored procedure named test. This procedure should calculate the common factors between 10 and 20. To find a common factor, you can use the modulo operator (%) to check whether a number can be evenly divided into both numbers. Then, this procedure should display a string that displays the common factors like this: 
 Common factors of 10 and 20: 1 2 5 */
 DROP PROCEDURE IF EXISTS test; 
 DELIMITER //
@@ -70,9 +70,7 @@ END//
 DELIMITER ;
 CALL test();
 
-/*4. Write a script that creates and calls a stored procedure named test. This stored procedure should create a cursor for a result set that consists of the product_name and list_price columns for each product with a list price that’s greater than $700. The rows in this result set should be sorted in descending sequence by list price. Then, the procedure should display a string variable that includes the product_name and list price for each product so it looks something like this:
-"Gibson SG","2517.00"|"Gibson Les Paul","1199.00"|
-Here, each value is enclosed in double quotes ("), each column is separated by a comma (,) and each row is separated by a pipe character (|).*/
+/*script that creates and calls a stored procedure named test. This stored procedure should create a cursor for a result set that consists of the product_name and list_price columns for each product with a list price that’s greater than $700. The rows in this result set should be sorted in descending sequence by list price. Then, the procedure should display a string variable that includes the product_name and list price for each product.*/
 DROP PROCEDURE IF EXISTS test; 
 DELIMITER //
  
@@ -105,7 +103,7 @@ END//
 DELIMITER ;
 CALL test();
 
-/*5.Write a script that creates and calls a stored procedure named test. This procedure should attempt to insert a new category named “Guitars” into the Categories table. If the insert is successful, the procedure should display this message:
+/*script that creates and calls a stored procedure named test. This procedure should attempt to insert a new category named “Guitars” into the Categories table. If the insert is successful, the procedure should display this message:
 1 row was inserted.
 If the update is unsuccessful, the procedure should display this message: Row was not inserted - duplicate entry.*/
 DROP PROCEDURE IF EXISTS test; 
@@ -129,14 +127,7 @@ DELIMITER ;
 CALL test();
 
 
-/*
-*SECOND PART 
-*Chapter 14 and 15
-*/
-
-
-/*1.Write a script that creates and calls a stored procedure named insert_category. First, code a statement that creates a procedure that adds a new row to the Categories table. To do that, this procedure should have one parameter for the category name.
-Code at least two CALL statements that test this procedure. (Note that this table doesn’t allow duplicate category names.)*/
+/*script that creates and calls a stored procedure named insert_category. First, code a statement that creates a procedure that adds a new row to the Categories table. To do that, this procedure should have one parameter for the category name.*/
  
 DROP PROCEDURE IF EXISTS insert_category; 
 DELIMITER //
@@ -151,7 +142,7 @@ DELIMITER ;
 CALL insert_category("Bohm");
 CALL insert_category("Guitars"); --Guitars already exist, so it will generate an error
 
-/*2.Write a script that creates and calls a stored function named discount_price that calculates the discount price of an item in the Order_Items table (discount amount subtracted from item price). To do that, this function should accept one parameter for the item ID, and it should return the value of the discount price for that item.*/ 
+/*script that creates and calls a stored function named discount_price that calculates the discount price of an item in the Order_Items table (discount amount subtracted from item price). To do that, this function should accept one parameter for the item ID, and it should return the value of the discount price for that item.*/ 
 DROP FUNCTION IF EXISTS discount_price; 
 DELIMITER //
  
@@ -187,7 +178,7 @@ SELECT item_total(5) AS 'Item Total'; --accept one parameter
 
 
 
-/*4.Write a script that creates and calls a stored procedure named update_product_discount that updates the discount_percent column in the Products table. This procedure should have one parameter for the product ID and another for the discount percent.
+/*script that creates and calls a stored procedure named update_product_discount that updates the discount_percent column in the Products table. This procedure should have one parameter for the product ID and another for the discount percent.
 If the value for the discount_percent column is a negative number, the stored procedure should signal state indicating that the value for this column must be a positive number.
 Code at least two CALL statements that test this procedure.*/
 DROP PROCEDURE IF EXISTS update_product_discount; 
