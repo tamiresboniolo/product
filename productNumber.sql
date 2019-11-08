@@ -159,7 +159,7 @@ END//
 DELIMITER ;
 SELECT discount_price(5) AS "Discount Price"; --accept one parameter
 
-/*3.Write a script that creates and calls a stored function named item_total that calculates the total amount of an item in the Order_Items table (discount price multiplied by quantity). To do that, this function should accept one parameter for the item ID, it should use the discount_price function that you created in assignment 2, and it should return the value of the total for that item.*/
+/*script that creates and calls a stored function named item_total that calculates the total amount of an item in the Order_Items table (discount price multiplied by quantity). To do that, this function should accept one parameter for the item ID, it should use the discount_price function that you created in assignment 2, and it should return the value of the total for that item.*/
 DROP FUNCTION IF EXISTS item_total; 
 DELIMITER //
  
@@ -212,7 +212,7 @@ CALL update_product_discount(1, 0);
 
 
 
-/*5.Write a script that creates and calls a stored procedure named test. This procedure should include two SQL statements coded as a transaction to delete the row with a customer ID of 8 from the Customers table. To do this, you must first delete all addresses for that order from the Addresses table.
+/*script that creates and calls a stored procedure named test. This procedure should include two SQL statements coded as a transaction to delete the row with a customer ID of 8 from the Customers table. To do this, you must first delete all addresses for that order from the Addresses table.
 If these statements execute successfully, commit the changes. Otherwise, roll back the changes. */
 DROP PROCEDURE IF EXISTS test; 
 DELIMITER //
